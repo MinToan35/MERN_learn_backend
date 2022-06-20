@@ -1,3 +1,13 @@
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "Toan1",
+    "password":"123"
+}
+
+###
 POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
@@ -5,4 +15,21 @@ Content-Type: application/json
     "username": "Toan",
     "password":"123"
 }
+
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmIwNGU2NDM4YzQxOTgxZDUwODUwNmYiLCJpYXQiOjE2NTU3MjgwMDJ9.NhqBtQK2mIBGvaZmna91i6Qww-KaFFSehTO3S7YPKf4
+
+{
+  "title": "React",
+  "description": "React",
+  "url": "react.com",
+  "status": "TO LEARN"
+}
+
+
+
 

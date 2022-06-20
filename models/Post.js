@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const PostSchema = new Schema({
-  titles: {
+  title: {
     type: String,
     requires: true,
   },
@@ -16,6 +16,9 @@ const PostSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: "users",
+  },
+  url: {
+    type: String,
   },
 });
 module.exports = mongoose.model("posts", PostSchema);
